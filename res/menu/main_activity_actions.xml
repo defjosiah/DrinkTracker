@@ -16,5 +16,7 @@
           android:title="@string/show_metrics"
           android:showAsAction="always"
           />
+          
+           
     
 </menu>

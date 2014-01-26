@@ -90,12 +90,7 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main);
 			TextView textView = (TextView) findViewById(R.id.textView1);
 			textView.setText("" + person.getCurrentEvent().getNumDrinks());
-			
-
-
 		}
-		
-		
 	}
 
 	//Below are methods that would update the number of drinks when buttons are pushed

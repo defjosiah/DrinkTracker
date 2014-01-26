@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Person extends APerson {
 	
 	private String name;
-	private double weight;
+	private int weight;
 	private Height height;
 	private String gender;
 	private ArrayList<IEvent> events = new ArrayList<IEvent>();
@@ -13,7 +13,7 @@ public class Person extends APerson {
 	/**
 	 * Create a personal profile when user first opens app.
 	 */
-	public Person(String name, double weight, Height height, String gender) {
+	public Person(String name, int weight, Height height, String gender) {
 		this.name = name;
 		this.weight = weight;
 		this.height = height;
@@ -40,7 +40,7 @@ public class Person extends APerson {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 

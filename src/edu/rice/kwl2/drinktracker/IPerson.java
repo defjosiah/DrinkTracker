@@ -8,7 +8,7 @@ interface IPerson {
 	
 	public double getWeight();
 	
-	public void setWeight(double weight);
+	public void setWeight(int weight);
 	
 	public Height getHeight();
 	
