@@ -56,9 +56,7 @@ public class MainActivity extends Activity {
     	
     	
     	
-    	
-    	
-    	
+    
     }
     
     //Below are methods that would update the number of drinks when buttons are pushed
@@ -85,11 +83,7 @@ public class MainActivity extends Activity {
     	TextView textView = (TextView) findViewById(R.id.textView1);
     	textView.setText(""+person.getCurrentEvent().getNumDrinks());
     }
-    public void createPerson(View view)
-    {
-    	
-    }
-    }
+   
     
     // push notifications require registration; we can potentially deal with this later
 //    /**
