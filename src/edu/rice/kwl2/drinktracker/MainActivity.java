@@ -1,27 +1,18 @@
 package edu.rice.kwl2.drinktracker;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.app.ActionBar;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.app.Activity;
 import android.view.View;
-import android.content.Context;
-import android.content.Intent;
-import android.view.Menu;
 import android.widget.EditText;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
 
 	private IPerson person;
-
-	public final static String PERSON_NAME = "edu.rice.kwl2.drinktracker";
 
 	boolean personExists=false; //set whether or not a person has been made
 
