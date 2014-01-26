@@ -10,9 +10,9 @@ interface IPerson {
 	
 	public void setWeight(double weight);
 	
-	public void setHeight(int feet, int inches);
-	
 	public Height getHeight();
+	
+	public void setHeight(int feet, int inches);
 	
 	public String getGender();
 	
