@@ -2,13 +2,13 @@ package edu.rice.kwl2.drinktracker;
 
 import java.util.ArrayList;
 
-public class Person {
+public class Person extends APerson{
 	
 	private String name;
 	private double weight;
 	private Height height;
 	private String gender;
-	private ArrayList<Event> events;
+	private ArrayList<IEvent> events;
 	private int end;
 	
 	/**
@@ -25,7 +25,7 @@ public class Person {
 	/**
 	 * Adds an event into the person's history.
 	 */
-	public void addEvent(Event newEvent) {
+	public void addEvent(IEvent newEvent) {
 		events.add(newEvent);
 	}
 	
@@ -77,8 +77,20 @@ public class Person {
 		}
 	}
 	
-	public Event getCurrentEvent() {
+	public IEvent getCurrentEvent() {
 		return events.get(events.size() -1);
+	}
+
+	@Override
+	public void setHeight(int feet, int inches) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setGender() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

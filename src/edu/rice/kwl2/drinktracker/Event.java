@@ -2,7 +2,7 @@ package edu.rice.kwl2.drinktracker;
 import java.util.ArrayList;
 import org.joda.time.*;
 
-public class Event {
+public class Event extends AEvent{
 	
 	private Person drinker;
 	private DateTime startTime;
@@ -100,6 +100,24 @@ public class Event {
 	
 	public void endEvent() {
 		endTime = DateTime.now();
+	}
+
+	@Override
+	public String getDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getStartTime() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addDrink(String drinkType, double numStdDrinks) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 
