@@ -11,7 +11,9 @@ import android.view.View;
 import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
 	//TODO: Create the person
@@ -41,6 +43,15 @@ public class MainActivity extends Activity {
     
     /* After OK is hit it will create the Person */
     public void createPerson(View view){
+    	EditText myEditName = (EditText)findViewById(R.id.editText1);
+    	String name = myEditName.getText().toString();
+    	
+    	ToggleButton myGender = (ToggleButton)findViewById(R.id.toggleButton1);
+    	boolean female = myGender.isChecked(); 
+    	
+    	
+    	
+    	
     	
     	
     }
