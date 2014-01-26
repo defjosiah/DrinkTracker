@@ -26,7 +26,7 @@
          android:background="@null"
          android:onClick="updateNumDrinksBeer"
          android:scaleType="fitCenter"
-         android:src="@drawable/change_image" />
+         android:src="@drawable/change_beer" />
 
      <ImageButton
          android:id="@+id/imageButton2"
@@ -39,7 +39,7 @@
          android:background="@null"
          android:onClick="updateNumDrinksWine"
          android:scaleType="fitCenter"
-         android:src="@drawable/wine" />
+         android:src="@drawable/change_wine" />
 
      <ImageButton
          android:id="@+id/imageButton3"
@@ -52,7 +52,7 @@
          android:background="@null"
          android:onClick="updateNumDrinksShot"
          android:scaleType="fitCenter"
-         android:src="@drawable/shot" />
+         android:src="@drawable/change_shot" />
 
      <ImageButton
          android:id="@+id/imageButton4"
@@ -64,6 +64,7 @@
          android:background="@null"
          android:onClick="updateNumDrinksCup"
          android:scaleType="fitCenter"
-         android:src="@drawable/cup" />
+         android:src="@drawable/change_cup" />
+
        
 </RelativeLayout>
