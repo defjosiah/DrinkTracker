@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Drink Tracker</string>
+    <string name="app_name">your father\'s life support</string>
     <string name="action_settings">Profile</string>
     <string name="hello_world">Hello world!</string>
     <string name="desc1">Beer</string>
@@ -23,6 +23,13 @@
     <string name="desbac">Desired BAC: </string>
     <string name="decimal">Enter a decimal number.</string>
     <string name="timeSince">Time Since First Drink</string>
+    <string name="beerCount">Beer Count: </string>
+    <string name="wineCount">Wine Count: </string>
+    <string name="punchCount">Punch Count: </string>
+    <string name="shotCount">Shot Count: </string>
     <string name="title_activity_metrics">Metrics</string>
+    <string name="phone">Friend\'s Phone Number: </string>
+    <string name="text_friend"> Text a Friend </string>
+    <string name="show_metrics"> Show Metrics </string>
 
 </resources>

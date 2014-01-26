@@ -2,14 +2,13 @@ package edu.rice.kwl2.drinktracker;
 
 import java.util.ArrayList;
 
-public class Person extends APerson{
+public class Person extends APerson {
 	
 	private String name;
 	private int weight;
 	private Height height;
 	private String gender;
 	private ArrayList<IEvent> events = new ArrayList<IEvent>();
-	private int end;
 	
 	/**
 	 * Create a personal profile when user first opens app.
@@ -86,5 +85,11 @@ public class Person extends APerson{
 		// TODO Auto-generated method stub
 		
 	}
+
+	//@Override
+	//public void setGender() {
+		// TODO Auto-generated method stub
+		
+	//}
 	
 }

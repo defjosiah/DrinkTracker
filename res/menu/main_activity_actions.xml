@@ -2,7 +2,19 @@
     <item android:id="@+id/add_drink"
           android:icon="@drawable/plus"
           android:title="@string/add_event"
-          android:showAsAction="ifRoom|withText"
+          android:showAsAction="always"
+          />    
+          
+          <item android:id="@+id/text"
+          android:icon="@drawable/message"
+          android:title="@string/text_friend"
+          android:showAsAction="always"
           />
 
+          <item android:id="@+id/metrics"
+          android:icon="@drawable/meter"
+          android:title="@string/show_metrics"
+          android:showAsAction="always"
+          />
+    
 </menu>

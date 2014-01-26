@@ -19,5 +19,7 @@ interface IEvent {
 	 * Returns: String for the push notification
 	 */
 	public String addDrink(String drinkType, double numStdDrinks); 
+	
+	public double getTimeElapsed();
 
 }
