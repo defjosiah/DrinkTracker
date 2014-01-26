@@ -9,7 +9,7 @@ public class Person extends APerson{
 	private Height height;
 	private String gender;
 	private ArrayList<IEvent> events = new ArrayList<IEvent>();
-	//private int end;
+	private int end;
 	
 	/**
 	 * Create a personal profile when user first opens app.
