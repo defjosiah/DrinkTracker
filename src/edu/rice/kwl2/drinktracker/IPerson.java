@@ -13,5 +13,9 @@ interface IPerson {
 	public void setHeight(int feet, int inches);
 	
 	public Height getHeight();
+	
+	public String getGender();
+	
+	public void setGender();
 
 }
