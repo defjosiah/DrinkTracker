@@ -2,6 +2,8 @@ package edu.rice.kwl2.drinktracker;
 import java.util.ArrayList;
 import org.joda.time.DateTime;
 import org.joda.time.DateTime.Property;
+import org.joda.time.Interval;
+import org.joda.time.*;
 
 public class Event {
 	
@@ -36,23 +38,24 @@ public class Event {
 	}
 	
 	public double calcBAC() {
-		// TODO Kathy: Find number of since starting drinking and run other BAC function
-		// double hoursSince = ;
-		return calcBAC(hoursSince);
+		return calcBAC(0.0);
 	}
 	
 	/*
-	 * Given a number of hours in the future (or negative), calculates BAC
+	 * Given a number of hours in the future, calculates BAC
 	 */
 	public double calcBAC(double xHours) {
-		// TODO Kathy: Get current time, set DP = num hours passed since startTime
-		//DateTime timeNow = DateTime.now();
 		double SD = getNumDrinks();
 		double BW = drinker.getBodyWaterConstant();
 		double Wt = drinker.getWeight();
 		double MR = drinker.getMetabolism();
-		//double DP = ;
-		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * DP);
+		// calculate elapsed time as drinkingTime
+		DateTime currTime = DateTime.now();
+		Period DP = new Period(startTime, currTime);
+		int hours = DP.getHours();
+		int minutes = DP.getMinutes();
+		double drinkingTime = (double) hours + ((double) minutes)/60;
+		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * drinkingTime);
 	}
 	
 	public double getNumDrinks () {
