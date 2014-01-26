@@ -30,7 +30,6 @@ public class MainActivity extends Activity {
         return super.onCreateOptionsMenu(menu);
     }
     
-<<<<<<< HEAD
     //Below are methods that would update the number of drinks when buttons are pushed
     int counter = 0; //TODO: temp test counter that will be replaced by the Person class's own variable
     public void updateNumDrinksBeer(View view){
@@ -48,13 +47,7 @@ public class MainActivity extends Activity {
     }
     
     public void updateNumDrinksWine(View view){
-	
-=======
-    public void sendBeer(View view) { //test to see if button pushes register
-        System.out.println("Beer added");
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        startActivity(intent);
->>>>>>> f05dac3d2a89f1b02214a206518a87462a967161
+    
     }
     
 }
