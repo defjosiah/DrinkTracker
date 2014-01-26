@@ -68,9 +68,6 @@ public class Event {
 	 * Checks the current BAC and gives warnings if it's too high.
 	 */
 	public void checkBAC () {
-		/*
-		 * TODO Give person messages based on how high their BAC is
-		 */
 		double BAC = getBAC();
 		if (BAC >= 0.25)
 			raiseWarning(0);
@@ -83,7 +80,20 @@ public class Event {
 	}
 	
 	public void raiseWarning(int alertLevel) {
-		;
+		switch (alertLevel) {
+			case 0: 
+				;
+				break;
+			case 1:
+				;
+				break;
+			case 2:
+				;
+				break;
+			case 3:
+				;
+				break;
+		}
 	}
 	
 	public void endEvent() {
