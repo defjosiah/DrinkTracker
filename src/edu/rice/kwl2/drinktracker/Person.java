@@ -9,6 +9,7 @@ public class Person {
 	private Height height;
 	private String gender;
 	private ArrayList<Event> events;
+	private int end;
 	
 	/**
 	 * Create a personal profile when user first opens app.
@@ -74,6 +75,10 @@ public class Person {
 		} else {
 			return .015;
 		}
+	}
+	
+	public Event getCurrentEvent() {
+		return events.get(events.size() -1);
 	}
 	
 }
