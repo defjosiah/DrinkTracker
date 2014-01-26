@@ -7,15 +7,22 @@ public class Event {
 	
 	private Person drinker;
 	private DateTime startTime;
+	private DateTime endTime;
 	private DateTime date;
 	private ArrayList<Drink> drinksList;
 	
+	/**
+	 * Creates a new drinking event.
+	 */
 	public Event (Person drinker, String startTime, DateTime date) {
 		this.drinker = drinker;
 		this.startTime = DateTime.now();
 //		this.date = startTime.dayOfYear(); // error!
 	}
 	
+	/**
+	 * Adds a new drink to the queue.
+	 */
 	public void addDrink (Drink newDrink) {
 		drinksList.add(newDrink);
 	}
