@@ -16,7 +16,7 @@ public class Event {
 	/**
 	 * Creates a new drinking event.
 	 */
-	public Event (Person drinker, DateTime date) {
+	public Event (Person drinker) {
 		this.drinker = drinker;
 		this.startTime = DateTime.now();
 //		this.date = startTime.dayOfYear(); // error!

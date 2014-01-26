@@ -14,10 +14,12 @@ public class Person {
 	 * Create a personal profile when user first opens app.
 	 */
 	Person(String name, double weight, Height height, String gender) {
+	public Person(String name, double weight, Height height, String gender) {
 		this.name = name;
 		this.weight = weight;
 		this.height = height;
 		this.gender = gender;
+		addEvent( new Event(this) );
 	}
 	
 	/**
