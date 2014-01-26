@@ -1,7 +1,6 @@
 package edu.rice.kwl2.drinktracker;
 import java.util.ArrayList;
 import org.joda.time.*;
-import org.joda.time.DateTime.Property;
 
 public class Event {
 	

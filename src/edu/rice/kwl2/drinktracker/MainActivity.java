@@ -2,9 +2,13 @@ package edu.rice.kwl2.drinktracker;
 
 import android.os.Bundle;
 import android.app.ActionBar;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.view.MenuInflater;
 import android.app.Activity;
 import android.view.View;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.widget.TextView;
@@ -55,5 +59,23 @@ public class MainActivity extends Activity {
     	TextView textView = (TextView) findViewById(R.id.textView1);
     	textView.setText(person.getCurrentEvent.getNumDrinks());
     }
+    
+    // push notifications require registration; we can potentially deal with this later
+//    /**
+//     * Send push notifications with BAC-related warnings
+//     */
+//    @SuppressWarnings("deprecation")
+//	public void pushNotification() {
+//    	String title = "title", subject = "subject", body = "body";
+//    	
+//    	NotificationManager NM;
+//    	NM = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+//    	
+//    	Notification notify = new Notification(android.R.drawable.stat_notify_more, title ,System.currentTimeMillis());
+//    
+//    	PendingIntent pending = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(),0);
+//    	notify.setLatestEventInfo(getApplicationContext(), subject, body,pending);
+//    	NM.notify(0, notify);
+//    }
     
 }
