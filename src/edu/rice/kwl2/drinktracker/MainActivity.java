@@ -6,6 +6,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.app.Activity;
 import android.view.View;
 import android.content.Context;
@@ -106,7 +107,7 @@ public class MainActivity extends Activity {
 	/*
 	 * When the user touch the setting it shows the profile
 	 */
-	public void showUserProfile(View view){
+	public boolean onOptionsItemSelected(MenuItem item){
 		setContentView(R.layout.make_a_person);
 		
 		EditText name = (EditText) findViewById(R.id.editText1);
@@ -125,6 +126,8 @@ public class MainActivity extends Activity {
 		}
 		
 		setContentView(R.layout.activity_main);
+		
+		 return super.onOptionsItemSelected(item);
 	}
 
 	// push notifications require registration; we can potentially deal with this later
