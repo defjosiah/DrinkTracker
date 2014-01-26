@@ -78,6 +78,7 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main);
 		}else{
 			setContentView(R.layout.activity_main);
+			TextView textView = (TextView) findViewById(R.id.textView1);
 			textView.setText("" + person.getCurrentEvent().getNumDrinks());
 		}
 		
