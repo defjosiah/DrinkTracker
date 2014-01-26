@@ -20,12 +20,17 @@ public class MainActivity extends Activity {
 	
 	private IPerson person;
 
+	public final static String PERSON_NAME = "edu.rice.kwl2.drinktracker";
+
 	boolean personExists=false; //set whether or not a person has been made
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
         super.onCreate(savedInstanceState);
-        if(!personExists) setContentView(R.layout.make_a_person);
+        if(!personExists)
+        {
+          	setContentView(R.layout.make_a_person);
+        }
         else setContentView(R.layout.activity_main);
     }
 
@@ -79,6 +84,11 @@ public class MainActivity extends Activity {
     	person.getCurrentEvent().addDrink("Wine",1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
     	textView.setText(""+person.getCurrentEvent().getNumDrinks());
+    }
+    public void createPerson(View view)
+    {
+    	
+    }
     }
     
     // push notifications require registration; we can potentially deal with this later
