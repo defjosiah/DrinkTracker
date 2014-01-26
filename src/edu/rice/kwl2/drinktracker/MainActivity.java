@@ -108,6 +108,7 @@ public class MainActivity extends Activity {
 	 */
 	public void showUserProfile(View view){
 		setContentView(R.layout.make_a_person);
+		
 		EditText name = (EditText) findViewById(R.id.editText1);
 		name.setText(person.getName());
 		EditText feet = (EditText) findViewById(R.id.editText3);
@@ -122,8 +123,8 @@ public class MainActivity extends Activity {
 		}else{
 			gender.setChecked(true);
 		}
-
-
+		
+		setContentView(R.layout.activity_main);
 	}
 
 	// push notifications require registration; we can potentially deal with this later
