@@ -21,6 +21,7 @@ public class Event {
 	
 	public double calcBAC() {
 		DateTime timeNow = DateTime.now();
+		Wt = getTheWight();
 		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * DP);
 	}
 	
