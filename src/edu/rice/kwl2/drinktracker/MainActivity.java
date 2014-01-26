@@ -74,8 +74,13 @@ public class MainActivity extends Activity {
 			person = new Person(name, weight, height, gender);
 
 			personExists = true;
+			
+			setContentView(R.layout.activity_main);
+		}else{
+			setContentView(R.layout.activity_main);
+			textView.setText("" + person.getCurrentEvent().getNumDrinks());
 		}
-		setContentView(R.layout.activity_main);
+		
 		
 	}
 
@@ -124,8 +129,6 @@ public class MainActivity extends Activity {
 		}else{
 			gender.setChecked(true);
 		}
-		
-		setContentView(R.layout.activity_main);
 		
 		 return super.onOptionsItemSelected(item);
 	}
