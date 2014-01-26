@@ -22,7 +22,7 @@ public class Metrics extends Activity {
     public void displayMetrics()
     {	
     	final TextView currentBAC = (TextView)findViewById(R.id.textView2);
-    	currentBAC.setText(String.valueOf(.14)); //replace .14 by the BAC calculator function
+    	currentBAC.setText(String.valueOf(person.getCurrentEvent().getBAC())); //replace .14 by the BAC calculator function
     	final TextView timeSince = (TextView)findViewById(R.id.textView5);
     	timeSince.setText("Too Long...");
     	final TextView shotCounter = (TextView)findViewById(R.id.textView10);
