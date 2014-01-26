@@ -86,11 +86,5 @@ public class Person extends APerson{
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void setGender() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }
