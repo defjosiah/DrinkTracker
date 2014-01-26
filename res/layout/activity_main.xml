@@ -18,14 +18,25 @@
          android:textSize="150sp" />
 
      <ImageButton
+         android:id="@+id/imageButton4"
+         android:layout_width="113dp"
+         android:layout_height="113dp"
+         android:layout_alignRight="@+id/imageButton1"
+         android:layout_alignTop="@+id/imageButton3"
+         android:adjustViewBounds="true"
+         android:background="@null"
+         android:onClick="updateNumDrinksCup"
+         android:scaleType="fitCenter"
+         android:src="@drawable/change_cup" />
+
+     <ImageButton
          android:id="@+id/imageButton1"
          android:layout_width="125dp"
          android:layout_height="125dp"
-         android:layout_above="@+id/imageButton3"
          android:layout_alignParentCenter="true"
          android:layout_alignParentLeft="true"
-         android:layout_marginBottom="53dp"
-         android:layout_marginLeft="40dp"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="25dp"
          android:background="@null"
          android:onClick="updateNumDrinksBeer"
          android:scaleType="fitCenter"
@@ -37,7 +48,7 @@
          android:layout_height="125dp"
          android:layout_alignParentRight="true"
          android:layout_alignTop="@+id/imageButton1"
-         android:layout_marginRight="34dp"
+         android:layout_marginRight="35dp"
          android:adjustViewBounds="true"
          android:background="@null"
          android:onClick="updateNumDrinksWine"
@@ -48,25 +59,13 @@
          android:id="@+id/imageButton3"
          android:layout_width="115dp"
          android:layout_height="115dp"
+         android:layout_alignLeft="@+id/imageButton2"
          android:layout_alignParentBottom="true"
-         android:layout_alignRight="@+id/imageButton2"
-         android:layout_marginBottom="21dp"
+         android:layout_marginBottom="31dp"
          android:adjustViewBounds="true"
          android:background="@null"
          android:onClick="updateNumDrinksShot"
          android:scaleType="fitCenter"
          android:src="@drawable/change_shot" />
-
-     <ImageButton
-         android:id="@+id/imageButton4"
-         android:layout_width="113dp"
-         android:layout_height="113dp"
-         android:layout_alignRight="@+id/imageButton1"
-         android:layout_alignTop="@+id/imageButton3"
-         android:adjustViewBounds="true"
-         android:background="@null"
-         android:onClick="updateNumDrinksCup"
-         android:scaleType="fitCenter"
-         android:src="@drawable/change_cup" />
        
 </RelativeLayout>
