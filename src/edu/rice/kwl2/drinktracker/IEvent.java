@@ -9,5 +9,10 @@ interface IEvent {
 	public String getStartTime();
 	
 	public double getBAC();
+	
+	/*
+	 * Input: 
+	 */
+	public String addDrink(String drinkType, double numStdDrinks); 
 
 }
