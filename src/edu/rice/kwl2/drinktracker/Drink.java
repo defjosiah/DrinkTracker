@@ -14,10 +14,9 @@ public class Drink extends ADrink {
 	/**
 	 * Constructs a drink.
 	 */
-	public Drink (String drinkType, double numStdDrinks, DateTime time) {
+	public Drink (String drinkType, double numStdDrinks) {
 		this.drinkType = drinkType;
 		this.numStdDrinks = numStdDrinks;
-		this.time = time;
 		time = DateTime.now();
 	}
 	
