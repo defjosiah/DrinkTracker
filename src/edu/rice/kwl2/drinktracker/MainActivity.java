@@ -15,12 +15,13 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	//TODO: Create the person
-	
+	boolean personExists=false; //set whether or not a person has been made
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        if(!personExists) setContentView(R.layout.make_a_person);
+        else setContentView(R.layout.activity_main);
     }
 
 
