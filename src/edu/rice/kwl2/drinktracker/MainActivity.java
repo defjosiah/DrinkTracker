@@ -60,17 +60,10 @@ public class MainActivity extends Activity {
     		gender = "Male";
     	}
     	
-<<<<<<< HEAD
-    	NumberPicker myFeet = (NumberPicker)findViewById(R.id.numberPicker2);
-    	NumberPicker myInch = (NumberPicker)findViewById(R.id.numberPicker3);
-    	int feet = myFeet.getValue();
-    	int inch = myInch.getValue();
-=======
     	EditText myFeet = (EditText)findViewById(R.id.editText3);
     	EditText myInch = (EditText)findViewById(R.id.editText4);
     	int feet = Integer.parseInt(myFeet.getText().toString());
     	int inch = Integer.parseInt(myInch.getText().toString());
->>>>>>> e8f1206301031357db77880e23f8805e96c16f77
     	Height height = new Height(feet,inch);
     	
     	EditText myWeight = (EditText)findViewById(R.id.editText2);
