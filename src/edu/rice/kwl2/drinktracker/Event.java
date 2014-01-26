@@ -1,9 +1,7 @@
 package edu.rice.kwl2.drinktracker;
 import java.util.ArrayList;
-import org.joda.time.DateTime;
-import org.joda.time.DateTime.Property;
-import org.joda.time.Interval;
 import org.joda.time.*;
+import org.joda.time.DateTime.Property;
 
 public class Event {
 	
@@ -18,7 +16,7 @@ public class Event {
 	/**
 	 * Creates a new drinking event.
 	 */
-	public Event (Person drinker, String startTime, DateTime date) {
+	public Event (Person drinker, DateTime date) {
 		this.drinker = drinker;
 		this.startTime = DateTime.now();
 //		this.date = startTime.dayOfYear(); // error!
@@ -37,14 +35,17 @@ public class Event {
 		return timeOfLastDrink;
 	}
 	
-	public double calcBAC() {
-		return calcBAC(0.0);
+	/**
+	 * Gets current blood alcohol content.
+	 */
+	public double getBAC() {
+		return getBAC(0.0);
 	}
 	
 	/*
 	 * Given a number of hours in the future, calculates BAC
 	 */
-	public double calcBAC(double xHours) {
+	public double getBAC(double xHours) {
 		double SD = getNumDrinks();
 		double BW = drinker.getBodyWaterConstant();
 		double Wt = drinker.getWeight();
@@ -55,6 +56,7 @@ public class Event {
 		int hours = DP.getHours();
 		int minutes = DP.getMinutes();
 		double drinkingTime = (double) hours + ((double) minutes)/60;
+		// BAC formula:
 		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * drinkingTime);
 	}
 	
@@ -62,6 +64,9 @@ public class Event {
 		return numStandardDrinks;
 	}
 	
+	public void endEvent() {
+		endTime = DateTime.now();
+	}
 	
 
 }
