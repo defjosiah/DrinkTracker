@@ -126,9 +126,9 @@ public class MainActivity extends Activity {
 		weight.setText(""+person.getWeight());
 		ToggleButton gender = (ToggleButton)findViewById(R.id.toggleButton1);
 		if(person.getGender() == "Female"){
-			gender.setChecked(false);
-		}else{
 			gender.setChecked(true);
+		}else{
+			gender.setChecked(false);
 		}
 		
 		 return super.onOptionsItemSelected(item);
