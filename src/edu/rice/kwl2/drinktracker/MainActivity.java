@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	//TODO: Create the person
-	
+	private IPerson person;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
@@ -35,29 +35,35 @@ public class MainActivity extends Activity {
         return super.onCreateOptionsMenu(menu);
     }
     
+    /* After OK is hit it will create the Person */
+    public void createPerson(View view){
+    	
+    	
+    }
+    
     //Below are methods that would update the number of drinks when buttons are pushed
     public void updateNumDrinksBeer(View view){
-    	person.getCurrentEvent.addDrink("Beer",1.0);
+    	person.getCurrentEvent().addDrink("Beer",1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
-    	textView.setText(person.getCurrentEvent.getNumDrinks());
+    	textView.setText(""+person.getCurrentEvent().getNumDrinks());
     }
     
     public void updateNumDrinksShot(View view){
-    	person.getCurrentEvent.addDrink("Shot",1.0);
+    	person.getCurrentEvent().addDrink("Shot",1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
-    	textView.setText(person.getCurrentEvent.getNumDrinks());
+    	textView.setText(""+person.getCurrentEvent().getNumDrinks());
     }
     
     public void updateNumDrinksCup(View view){
-    	person.getCurrentEvent.addDrink("Jungle",1.5);
+    	person.getCurrentEvent().addDrink("Jungle",1.5);
     	TextView textView = (TextView) findViewById(R.id.textView1);
-    	textView.setText(person.getCurrentEvent.getNumDrinks());
+    	textView.setText(""+person.getCurrentEvent().getNumDrinks());
     }
     
     public void updateNumDrinksWine(View view){
-    	person.getCurrentEvent.addDrink("Wine",1.0);
+    	person.getCurrentEvent().addDrink("Wine",1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
-    	textView.setText(person.getCurrentEvent.getNumDrinks());
+    	textView.setText(""+person.getCurrentEvent().getNumDrinks());
     }
     
     // push notifications require registration; we can potentially deal with this later
