@@ -1,7 +1,10 @@
 package edu.rice.kwl2.drinktracker;
 
+import java.io.PrintWriter;
+import java.util.Scanner;
 import android.app.Activity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,15 +16,19 @@ import android.widget.ToggleButton;
 public class MainActivity extends Activity {
 
 	private IPerson person;
+	//private EditText myNumber= new EditText(null);
 
 	boolean personExists=false; //set whether or not a person has been made
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) { //main function
 		super.onCreate(savedInstanceState);
 		if(!personExists)
 		{
-			setContentView(R.layout.activity_metrics);
+			setContentView(R.layout.make_a_person);
+			//try to hide the keyboard
+			EditText edtView=(EditText)findViewById(R.id.editText2);
+			edtView.setInputType(0);
 		}
 		else setContentView(R.layout.activity_main);
 	}
@@ -31,7 +38,7 @@ public class MainActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) { //for the options menu in the corner
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getActionBar().setDisplayShowTitleEnabled(false); //hide "DrinkTracker"
-		getActionBar().setDisplayShowHomeEnabled(false); //hide icon
+		//getActionBar().setDisplayShowHomeEnabled(false); //hide icon
 		getMenuInflater().inflate(R.menu.main, menu);
 		MenuInflater inflater = getMenuInflater(); //used for action bar buttons
 		inflater.inflate(R.menu.main_activity_actions, menu);
@@ -57,6 +64,7 @@ public class MainActivity extends Activity {
 		int feet = Integer.parseInt(myFeet.getText().toString());
 		int inch = Integer.parseInt(myInch.getText().toString());
 		Height height = new Height(feet,inch);
+		EditText myNumber = (EditText)findViewById(R.id.editText5); //stores a phone number
 
 		EditText myWeight = (EditText)findViewById(R.id.editText2);
 		int weight = Integer.valueOf(myWeight.getText().toString());
@@ -84,6 +92,9 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main);
 			TextView textView = (TextView) findViewById(R.id.textView1);
 			textView.setText("" + person.getCurrentEvent().getNumDrinks());
+			
+
+
 		}
 		
 		
@@ -118,23 +129,67 @@ public class MainActivity extends Activity {
 	 * When the user touch the setting it shows the profile
 	 */
 	public boolean onOptionsItemSelected(MenuItem item){
-		setContentView(R.layout.make_a_person);
-		
-		EditText name = (EditText) findViewById(R.id.editText1);
-		name.setText(person.getName());
-		EditText feet = (EditText) findViewById(R.id.editText3);
-		feet.setText(""+person.getHeight().getFt());
-		EditText inch = (EditText) findViewById(R.id.editText4);
-		inch.setText(""+person.getHeight().getIn());
-		EditText weight = (EditText) findViewById(R.id.editText2);
-		weight.setText(""+person.getWeight());
-		ToggleButton gender = (ToggleButton)findViewById(R.id.toggleButton1);
-		if(person.getGender() == "Female"){
-			gender.setChecked(true);
-		}else{
-			gender.setChecked(false);
+		switch (item.getItemId()) {
+		case R.id.add_drink: //sets up a case for each button
+		{
+			setContentView(R.layout.make_a_person);
+			EditText name = (EditText) findViewById(R.id.editText1);
+			name.setText(person.getName());
+			EditText feet = (EditText) findViewById(R.id.editText3);
+			feet.setText(""+person.getHeight().getFt());
+			EditText inch = (EditText) findViewById(R.id.editText4);
+			inch.setText(""+person.getHeight().getIn());
+			EditText weight = (EditText) findViewById(R.id.editText2);
+			weight.setText(""+person.getWeight());
+			ToggleButton gender = (ToggleButton)findViewById(R.id.toggleButton1);
+			if(person.getGender() == "Female") gender.setChecked(true);
+			else 							   gender.setChecked(false);
+			return super.onOptionsItemSelected(item);
+		}	 
+		case R.id.text:  //some sort of total drink counter integration to prevent accidental presses
+			sendSMS(/*((EditText)myNumber).getText().toString()*/"7274320804", "Hey buddy, I was being an idiot and long story short, I got shitfaced. Would you please bring me back to safety? ");
+			return super.onOptionsItemSelected(item);
+		case R.id.metrics:
+			launchMetrics();
+			return super.onOptionsItemSelected(item);
+		default: return super.onOptionsItemSelected(item);
 		}
 	
-		 return super.onOptionsItemSelected(item);
+		
 	}
+	 private void sendSMS(String phoneNumber, String message)
+	   {
+	       SmsManager sms = SmsManager.getDefault();
+	       sms.sendTextMessage(phoneNumber, null, message, null, null);
+	    }
+	 
+	 public void launchMetrics()
+	 {
+		 setContentView(R.layout.activity_metrics);
+	 }
+	 
+	 /*public void setProfile(String name, String gender, String feet, String inches, String weight, String phone)
+	 {
+		 PrintWriter outFile = new PrintWriter("@res/profiles.txt");
+		 outFile.print(":::");//identifier as a new profile
+		 outFile.println(name);
+		 outFile.println(weight);
+		 outFile.println(feet);
+		 outFile.println(inches);
+		 outFile.println(gender);
+		 outFile.println(phone);
+		 outFile.println();
+	 }
+	 public Person openProfile(String name)
+	 {
+		 Scanner inFile = new Scanner("@res/profiles.txt");
+		 if (!inFile.hasNextLine())
+			 return new Person(name, 0,new Height(0,0), "androgenous");
+		 if(inFile.next(":::").nextLine().equalsIgnoreCaps(name))
+		 {
+			 return new Person(name, )
+		 }
+		 
+	 }*/
+	
 }

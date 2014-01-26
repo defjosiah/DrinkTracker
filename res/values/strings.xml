@@ -28,5 +28,8 @@
     <string name="punchCount">Punch Count: </string>
     <string name="shotCount">Shot Count: </string>
     <string name="title_activity_metrics">Metrics</string>
+    <string name="phone">Friend\'s Phone Number: </string>
+    <string name="text_friend"> Text a Friend </string>
+    <string name="show_metrics"> Show Metrics </string>
 
 </resources>
