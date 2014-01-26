@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class Metrics extends Activity {
 
 	//Person person = MainActivity. import the existing person
-	//Person person = new Person("Bob Smith", 233.5, new Height(5,9), "male"); //test person for now, implement the existing person
+	Person person = new Person("Bob Smith", 233, new Height(5,9), "male"); //test person for now, implement the existing person
     @Override
     protected void onCreate(Bundle savedInstanceState) 
 	{

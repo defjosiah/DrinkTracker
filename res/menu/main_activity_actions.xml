@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/add_drink"
-          android:icon="@drawable/plus"
+          android:icon="@drawable/face"
           android:title="@string/add_event"
           android:showAsAction="always"
           />    
