@@ -13,7 +13,7 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
 
-	private IPerson person;
+	private Person person;
 	//private EditText myNumber= new EditText(null);
 
 	boolean personExists=false; //set whether or not a person has been made
@@ -70,12 +70,12 @@ public class MainActivity extends Activity {
 		
 		if(!personExists){
 			
-			person = new Person(name, weight, height, gender);
+			person = Person.getInstance();
 
 			personExists = true;
 			
 			setContentView(R.layout.activity_main);
-		}else{
+		}
 			if(!name.equals(person.getName()))
 				person.setName(name);
 			else if(height.getFt() != person.getHeight().getFt())
@@ -90,7 +90,6 @@ public class MainActivity extends Activity {
 			setContentView(R.layout.activity_main);
 			TextView textView = (TextView) findViewById(R.id.textView1);
 			textView.setText("" + person.getCurrentEvent().getNumDrinks());
-		}
 	}
 
 	//Below are methods that would update the number of drinks when buttons are pushed
