@@ -21,5 +21,7 @@ interface IPerson {
 	public double getBodyWaterConstant();
 	
 	public double getMetabolism ();
+	
+	public IEvent getCurrentEvent();
 
 }
