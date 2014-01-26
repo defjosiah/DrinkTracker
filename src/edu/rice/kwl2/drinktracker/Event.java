@@ -25,10 +25,11 @@ public class Event {
 	/**
 	 * Adds a new drink to the queue.
 	 */
-	public void addDrink (Drink newDrink) {
+	public String addDrink (Drink newDrink) {
 		drinksList.add(newDrink);
 		numStandardDrinks += newDrink.getNumStdDrinks();
 		timeOfLastDrink = DateTime.now();
+		return checkBAC(); 
 	}
 	
 	public DateTime timeOfLastDrink() {
@@ -47,7 +48,7 @@ public class Event {
 	 */
 	public double getBAC(double xHours) {
 		double SD = getNumDrinks();
-		double BW = drinker.getBodyWaterConstant();
+		double BodyWeight = drinker.getBodyWaterConstant();
 		double Wt = drinker.getWeight();
 		double MR = drinker.getMetabolism();
 		// calculate elapsed time as drinkingTime
@@ -57,7 +58,7 @@ public class Event {
 		int minutes = DP.getMinutes();
 		double drinkingTime = (double) hours + ((double) minutes)/60;
 		// BAC formula:
-		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * drinkingTime);
+		return ((.806 * SD * 1.2) / (BodyWeight * Wt)) - (MR * drinkingTime);
 	}
 	
 	public double getNumDrinks () {
@@ -67,32 +68,34 @@ public class Event {
 	/**
 	 * Checks the current BAC and gives warnings if it's too high.
 	 */
-	public void checkBAC () {
+	public String checkBAC () {
 		double BAC = getBAC();
 		if (BAC >= 0.25)
-			raiseWarning(0);
+			return raiseWarning(0);
 		else if (BAC >= 0.2)
-			raiseWarning(1);
+			return raiseWarning(1);
 		else if (BAC >= 0.16)
-			raiseWarning(2);
+			return raiseWarning(2);
 		else if (BAC >= 0.12)
-			raiseWarning(3);
+			return raiseWarning(3);
+		else
+			return raiseWarning(4);
 	}
 	
-	public void raiseWarning(int alertLevel) {
+	public String raiseWarning(int alertLevel) {
 		switch (alertLevel) {
 			case 0: 
-				;
-				break;
+				return "Case 0 - Death";
 			case 1:
-				;
-				break;
+				return "Case 1 - Almost Death";
 			case 2:
-				;
-				break;
+				return "Case 2 - Super Sloppy";
 			case 3:
-				;
-				break;
+				return "Case 3 - Schwasty-Schwaste";
+			case 4:
+				return "Case 4 - Drink more, biotch";
+			default:
+				return "You should never hit this one, something is wrong";
 		}
 	}
 	
