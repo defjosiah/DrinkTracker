@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/background2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/name"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+	    <EditText
+	        android:id="@+id/editText1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:inputType="textPersonName"
+	        android:title="@string/nameQ" />
+	    
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="Gender: MALE"
+        android:textOff="Gender: FEMALE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/height"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/feet"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/inches"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+	        
+	    <TextView
+	        android:id="@+id/textView5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/weight"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <EditText
+	        android:id="@+id/editText2"
+	        android:title="@string/weightQ"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="10"
+	        android:inputType="number" >
+
+	        <requestFocus />
+	    </EditText>
+	    
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/ok" 
+		android:onClick="createPerson"
+		/>
+
+</LinearLayout>
