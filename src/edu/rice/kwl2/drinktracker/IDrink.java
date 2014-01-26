@@ -5,7 +5,7 @@ package edu.rice.kwl2.drinktracker;
  */
 public interface IDrink {
 
-	public IDrink getDrinkType();
+	public String getDrinkType();
 	
 	public double getNumStdDrinks();
 	

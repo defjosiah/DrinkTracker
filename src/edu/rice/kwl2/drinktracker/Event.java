@@ -1,18 +1,19 @@
 package edu.rice.kwl2.drinktracker;
 import java.util.ArrayList;
 import org.joda.time.DateTime;
+import org.joda.time.DateTime.Property;
 
 public class Event {
 	
 	private Person drinker;
 	private DateTime startTime;
-	private String date;
+	private DateTime date;
 	private ArrayList<Drink> drinksList;
 	
-	public Event (Person drinker, String startTime, String date) {
+	public Event (Person drinker, String startTime, DateTime date) {
 		this.drinker = drinker;
-		this.startTime = startTime;
-		this.date = date;
+		this.startTime = DateTime.now();
+//		this.date = startTime.dayOfYear(); // error!
 	}
 	
 	public void addDrink (Drink newDrink) {

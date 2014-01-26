@@ -22,15 +22,13 @@ public class Drink extends ADrink {
 	}
 	
 	@Override
-	public IDrink getDrinkType() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getDrinkType() {
+		return drinkType;
 	}
 
 	@Override
 	public double getNumStdDrinks() {
-		// TODO Auto-generated method stub
-		return 0;
+		return numStdDrinks;
 	}
 	
 }
