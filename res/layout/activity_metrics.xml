@@ -106,4 +106,13 @@
         android:text="[TIME GOES HERE]"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextSwitcher
+        android:id="@+id/textSwitcher1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" >
+    </TextSwitcher>
+
 </RelativeLayout>
