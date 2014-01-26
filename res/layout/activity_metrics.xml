@@ -180,7 +180,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignBottom="@+id/textView8"
-        android:layout_alignRight="@+id/textView12"
+        android:layout_alignLeft="@+id/textView11"
         android:text="punchCounter"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

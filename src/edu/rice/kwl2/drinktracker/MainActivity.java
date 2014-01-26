@@ -1,7 +1,5 @@
 package edu.rice.kwl2.drinktracker;
 
-import java.io.PrintWriter;
-import java.util.Scanner;
 import android.app.Activity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
