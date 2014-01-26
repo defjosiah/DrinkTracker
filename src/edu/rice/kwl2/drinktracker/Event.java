@@ -64,6 +64,28 @@ public class Event {
 		return numStandardDrinks;
 	}
 	
+	/**
+	 * Checks the current BAC and gives warnings if it's too high.
+	 */
+	public void checkBAC () {
+		/*
+		 * TODO Give person messages based on how high their BAC is
+		 */
+		double BAC = getBAC();
+		if (BAC >= 0.25)
+			raiseWarning(0);
+		else if (BAC >= 0.2)
+			raiseWarning(1);
+		else if (BAC >= 0.16)
+			raiseWarning(2);
+		else if (BAC >= 0.12)
+			raiseWarning(3);
+	}
+	
+	public void raiseWarning(int alertLevel) {
+		;
+	}
+	
 	public void endEvent() {
 		endTime = DateTime.now();
 	}
