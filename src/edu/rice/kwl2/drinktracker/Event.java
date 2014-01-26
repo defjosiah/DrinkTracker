@@ -108,16 +108,19 @@ public class Event extends AEvent{
 		return null;
 	}
 
+	public double getTimeElapsed() {
+		return 0d;
+	}
+	
 	@Override
-	public String getStartTime() {
-		// TODO Auto-generated method stub
-		return null;
+	public DateTime getStartTime() {
+		return startTime;
 	}
 
 	@Override
 	public String addDrink(String drinkType, double numStdDrinks) {
-		// TODO Auto-generated method stub
-		return null;
+		Drink newDrink = new Drink(drinkType, numStdDrinks);
+		return addDrink(newDrink);
 	}
 	
 
