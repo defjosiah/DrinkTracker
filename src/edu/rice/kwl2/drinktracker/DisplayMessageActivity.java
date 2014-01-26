@@ -7,6 +7,9 @@ import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.os.Build;
 
+/**
+ * Launches a new activity with a header.
+ */
 public class DisplayMessageActivity extends Activity {
 
 	@Override
