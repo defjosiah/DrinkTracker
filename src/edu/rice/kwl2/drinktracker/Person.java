@@ -75,9 +75,4 @@ public class Person {
 		}
 	}
 	
-	public void checkBAC (double BAC) {
-		/*
-		 * TODO Give person messages based on how high their BAC is
-		 */
-	}
 }
