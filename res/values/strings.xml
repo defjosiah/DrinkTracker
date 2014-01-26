@@ -4,5 +4,10 @@
     <string name="app_name">Drink Tracker</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="desc1">Beer</string>
+    <string name="desc2">Wine</string>
+    <string name="desc3">Shot</string>
+    <string name="desc4">Mystery Juice</string>
+    <string name="title_activity_display_message">Message Goes Here!</string>
+    
 </resources>
