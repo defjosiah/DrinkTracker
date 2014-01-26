@@ -33,6 +33,7 @@ public class Metrics extends Activity {
     	timeSince.setText("0"); //replace with shotCounter
     	final TextView punchCounter = (TextView)findViewById(R.id.textView13);
     	timeSince.setText("4"); //replace with shotCounter
+    	
     }
     
     public void calcDesiredBAC()
