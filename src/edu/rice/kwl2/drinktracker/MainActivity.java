@@ -15,11 +15,10 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	//TODO: Create the person
-<<<<<<< HEAD
+	
 	private IPerson person;
-=======
+
 	boolean personExists=false; //set whether or not a person has been made
->>>>>>> 9c92900dfefa0d52a676a6c0b7cf7c33cfc82313
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
