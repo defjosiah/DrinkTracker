@@ -129,23 +129,4 @@ public class MainActivity extends Activity {
 		
 		 return super.onOptionsItemSelected(item);
 	}
-
-	// push notifications require registration; we can potentially deal with this later
-	//    /**
-	//     * Send push notifications with BAC-related warnings
-	//     */
-	//    @SuppressWarnings("deprecation")
-	//	public void pushNotification() {
-	//    	String title = "title", subject = "subject", body = "body";
-	//    	
-	//    	NotificationManager NM;
-	//    	NM = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-	//    	
-	//    	Notification notify = new Notification(android.R.drawable.stat_notify_more, title ,System.currentTimeMillis());
-	//    
-	//    	PendingIntent pending = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(),0);
-	//    	notify.setLatestEventInfo(getApplicationContext(), subject, body,pending);
-	//    	NM.notify(0, notify);
-	//    }
-
 }
