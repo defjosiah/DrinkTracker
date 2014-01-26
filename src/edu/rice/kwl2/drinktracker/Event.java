@@ -9,7 +9,9 @@ public class Event {
 	private DateTime startTime;
 	private DateTime endTime;
 	private DateTime date;
+	private DateTime timeOfLastDrink;
 	private ArrayList<Drink> drinksList;
+	private double numStandardDrinks;
 	
 	/**
 	 * Creates a new drinking event.
@@ -25,10 +27,12 @@ public class Event {
 	 */
 	public void addDrink (Drink newDrink) {
 		drinksList.add(newDrink);
+		numStandardDrinks += newDrink.getNumStdDrinks();
+		timeOfLastDrink = DateTime.now();
 	}
 	
 	public DateTime timeOfLastDrink() {
-		return null;
+		return timeOfLastDrink;
 	}
 	
 	public double calcBAC() {
@@ -51,6 +55,10 @@ public class Event {
 		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * DP);
 	}
 	
-	public double getNumDrinks {}
+	public double getNumDrinks () {
+		return numStandardDrinks;
+	}
+	
+	
 
 }

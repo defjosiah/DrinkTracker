@@ -1,4 +1,4 @@
-package com.example.testapp;
+package edu.rice.kwl2.drinktracker;
 
 import android.os.Bundle;
 import android.app.Activity;
