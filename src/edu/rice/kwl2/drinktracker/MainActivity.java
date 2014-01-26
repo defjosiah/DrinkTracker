@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -20,7 +21,8 @@ public class MainActivity extends Activity {
 	
 	private IPerson person;
 
-	
+	public final static String PERSON_NAME = "edu.rice.kwl2.drinktracker";
+
 	boolean personExists=false; //set whether or not a person has been made
 	
     @Override
@@ -52,8 +54,23 @@ public class MainActivity extends Activity {
     	
     	ToggleButton myGender = (ToggleButton)findViewById(R.id.toggleButton1);
     	boolean female = myGender.isChecked(); 
+    	String gender;
+    	if(female){
+    		gender = "Female";
+    	}else{
+    		gender = "Male";
+    	}
     	
+    	NumberPicker myFeet = (NumberPicker)findViewById(R.id.numberPicker2);
+    	NumberPicker myInch = (NumberPicker)findViewById(R.id.numberPicker3);
+    	int feet = myFeet.getValue();
+    	int inch = myInch.getValue();
+    	Height myHeight = new Height(feet,inch);
     	
+    	EditText myWeight = (EditText)findViewById(R.id.editText2);
+    	int weight = Integer.valueOf(myWeight.getText().toString());
+    	
+    	person = new Person( name,  weight, myHeight, gender);
     	
     
     }
