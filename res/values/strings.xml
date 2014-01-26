@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Drink Tracker</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Profile</string>
     <string name="hello_world">Hello world!</string>
     <string name="desc1">Beer</string>
     <string name="desc2">Wine</string>
