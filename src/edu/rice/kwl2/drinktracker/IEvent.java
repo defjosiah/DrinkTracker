@@ -2,7 +2,7 @@ package edu.rice.kwl2.drinktracker;
 
 interface IEvent {
 	
-	public int getNumDrinks();
+	public double getNumDrinks();
 	
 	public String getDate();
 	
@@ -11,7 +11,10 @@ interface IEvent {
 	public double getBAC();
 	
 	/*
-	 * Input: 
+	 * Input: String: type of Drink
+	 * 	      Double: number of Standard Drinks
+	 * 
+	 * Returns: String for the push notification
 	 */
 	public String addDrink(String drinkType, double numStdDrinks); 
 
