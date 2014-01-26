@@ -19,6 +19,10 @@ public class Event {
 		drinksList.add(newDrink);
 	}
 	
+	public DateTime timeOfLastDrink() {
+		return null;
+	}
+	
 	public double calcBAC() {
 		DateTime timeNow = DateTime.now();
 		Wt = getTheWight();
