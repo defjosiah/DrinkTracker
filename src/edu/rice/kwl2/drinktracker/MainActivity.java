@@ -61,10 +61,10 @@ public class MainActivity extends Activity {
     		gender = "Male";
     	}
     	
-    	NumberPicker myFeet = (NumberPicker)findViewById(R.id.numberPicker2);
-    	NumberPicker myInch = (NumberPicker)findViewById(R.id.numberPicker3);
-    	int feet = myFeet.getValue();
-    	int inch = myInch.getValue();
+    	EditText myFeet = (EditText)findViewById(R.id.editText3);
+    	EditText myInch = (EditText)findViewById(R.id.editText4);
+    	int feet = Integer.valueOf(myFeet.getText().toString());
+    	int inch = Integer.valueOf(myInch.getText().toString());
     	Height myHeight = new Height(feet,inch);
     	
     	EditText myWeight = (EditText)findViewById(R.id.editText2);
@@ -72,6 +72,9 @@ public class MainActivity extends Activity {
     	
     	person = new Person( name,  weight, myHeight, gender);
     	
+    	personExists = true;
+    	
+    	setContentView(R.layout.activity_main);
     
     }
     
