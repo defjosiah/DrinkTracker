@@ -3,6 +3,16 @@ package edu.rice.kwl2.drinktracker;
 import java.util.ArrayList;
 
 public class Person extends APerson {
+	private static final Person instance;
+	
+	static {
+	    try {
+	     
+	      instance = new Person();
+	    } catch (Exception e) {
+	      throw new RuntimeException("Darn, an error occurred!", e);
+	    }
+	  }
 	
 	private String name;
 	private int weight;
@@ -10,10 +20,24 @@ public class Person extends APerson {
 	private String gender;
 	private ArrayList<IEvent> events = new ArrayList<IEvent>();
 	
+	
+	private Person(){
+		this.name = "";
+		this.weight = 0;
+		this.height = new Height(0,0);
+		this.gender = "";
+		addEvent( new Event(this) );
+	}
+	
+	public static Person getInstance() {
+	    return instance;
+	 }
+	 
+	
 	/**
 	 * Create a personal profile when user first opens app.
 	 */
-	public Person(String name, int weight, Height height, String gender) {
+	private Person(String name, int weight, Height height, String gender) {
 		this.name = name;
 		this.weight = weight;
 		this.height = height;
