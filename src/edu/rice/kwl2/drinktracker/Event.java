@@ -25,14 +25,25 @@ public class Event {
 	}
 	
 	public double calcBAC() {
-		DateTime timeNow = DateTime.now();
-		Wt = getTheWight();
-		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * DP);
+		// TODO Kathy: Find number of since starting drinking and run other BAC function
+		// double hoursSince = ;
+		return calcBAC(hoursSince);
 	}
 	
 	/*
 	 * Given a number of hours in the future (or negative), calculates BAC
 	 */
-	public double calcBAC(double xHours) {}
+	public double calcBAC(double xHours) {
+		// TODO Kathy: Get current time, set DP = num hours passed since startTime
+		//DateTime timeNow = DateTime.now();
+		double SD = getNumDrinks();
+		double BW = drinker.getBodyWaterConstant();
+		double Wt = drinker.getWeight();
+		double MR = drinker.getMetabolism();
+		//double DP = ;
+		return ((.806 * SD * 1.2) / (BW * Wt)) - (MR * DP);
+	}
+	
+	public double getNumDrinks {}
 
 }

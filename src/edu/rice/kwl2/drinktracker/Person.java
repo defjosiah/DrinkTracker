@@ -45,8 +45,20 @@ public class Person {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-
 	
-
+	public double getBodyWaterConstant () {
+		if (gender == "Female") {
+			return .49;
+		} else {
+			return .58;
+		}
+	}
+	
+	public double getMetabolism () {
+		if (gender == "Female") {
+			return .017;
+		} else {
+			return .015;
+		}
+	}
 }
