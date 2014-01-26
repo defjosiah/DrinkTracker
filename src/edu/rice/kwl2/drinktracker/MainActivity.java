@@ -21,9 +21,10 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) { //for the options menu in the corner
         // Inflate the menu; this adds items to the action bar if it is present.
-    	getActionBar().setDisplayShowTitleEnabled(false);
+    	getActionBar().setDisplayShowTitleEnabled(false); //hide "DrinkTracker"
+    	getActionBar().setDisplayShowHomeEnabled(false); //hide icon
     	getMenuInflater().inflate(R.menu.main, menu);
-        MenuInflater inflater = getMenuInflater();
+        MenuInflater inflater = getMenuInflater(); //used for action bar buttons
         inflater.inflate(R.menu.main_activity_actions, menu);
         return super.onCreateOptionsMenu(menu);
     }
