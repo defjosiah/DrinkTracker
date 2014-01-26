@@ -22,6 +22,7 @@
     <string name="bac">BAC: </string>
     <string name="desbac">Desired BAC: </string>
     <string name="decimal">Enter a decimal number.</string>
+    <string name="timeSince">Time Since First Drink</string>
     <string name="title_activity_metrics">Metrics</string>
 
 </resources>
