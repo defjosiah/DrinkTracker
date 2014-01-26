@@ -10,6 +10,7 @@ import android.view.Menu;
 
 public class MainActivity extends Activity {
 
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
         super.onCreate(savedInstanceState);
@@ -20,7 +21,8 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) { //for the options menu in the corner
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+    	getActionBar().setDisplayShowTitleEnabled(false);
+    	getMenuInflater().inflate(R.menu.main, menu);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_actions, menu);
         return super.onCreateOptionsMenu(menu);
