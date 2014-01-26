@@ -48,10 +48,12 @@
             android:text="@string/height"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <NumberPicker
-            android:id="@+id/numberPicker2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/textView2"
@@ -61,10 +63,12 @@
             android:text="@string/feet"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <NumberPicker
-            android:id="@+id/numberPicker3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/textView3"
