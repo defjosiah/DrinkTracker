@@ -30,6 +30,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.rice.kwl2.drinktracker.MainActivity" />
         </activity>
+        
+        <activity
+        android:name="edu.rice.kwl2.drinktracker.Metrics"
+        android:label="@string/title_metrics"
+        android:parentActivityName="edu.rice.kwl2.drinktracker.MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="edu.rice.kwl2.drinktracker.MainActivity" />
+    	</activity>
+    
     </application>
 
 </manifest>

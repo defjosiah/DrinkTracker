@@ -18,5 +18,7 @@
     <string name="weightQ">weight in pounds</string>
     <string name="ok">OK!</string>
     <string name="title_activity_display_message">YEAAA BITCHEZ!</string>
-    
+    <string name="title_metrics">Metrics</string>
+    <string name="title_activity_metrics">Metrics</string>
+
 </resources>
