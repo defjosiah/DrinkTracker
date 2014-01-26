@@ -16,7 +16,7 @@ interface IPerson {
 	
 	public String getGender();
 	
-	public void setGender();
+	public void setGender(String gender);
 	
 	public double getBodyWaterConstant();
 	

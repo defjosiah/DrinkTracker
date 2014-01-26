@@ -49,34 +49,47 @@ public class MainActivity extends Activity {
 
 	/* After OK is hit it will create the Person */
 	public void createPerson(View view) {
+		EditText myEditName = (EditText)findViewById(R.id.editText1);
+		String name = myEditName.getText().toString();
+
+		ToggleButton myGender = (ToggleButton)findViewById(R.id.toggleButton1);
+		boolean female = myGender.isChecked(); 
+		String gender;
+		if (female) {
+			gender = "Female";
+		} else {
+			gender = "Male";
+		}
+
+		EditText myFeet = (EditText)findViewById(R.id.editText3);
+		EditText myInch = (EditText)findViewById(R.id.editText4);
+		int feet = Integer.parseInt(myFeet.getText().toString());
+		int inch = Integer.parseInt(myInch.getText().toString());
+		Height height = new Height(feet,inch);
+
+		EditText myWeight = (EditText)findViewById(R.id.editText2);
+		int weight = Integer.valueOf(myWeight.getText().toString());
+
+		
 		if(!personExists){
-			EditText myEditName = (EditText)findViewById(R.id.editText1);
-			String name = myEditName.getText().toString();
-
-			ToggleButton myGender = (ToggleButton)findViewById(R.id.toggleButton1);
-			boolean female = myGender.isChecked(); 
-			String gender;
-			if (female) {
-				gender = "Female";
-			} else {
-				gender = "Male";
-			}
-
-			EditText myFeet = (EditText)findViewById(R.id.editText3);
-			EditText myInch = (EditText)findViewById(R.id.editText4);
-			int feet = Integer.parseInt(myFeet.getText().toString());
-			int inch = Integer.parseInt(myInch.getText().toString());
-			Height height = new Height(feet,inch);
-
-			EditText myWeight = (EditText)findViewById(R.id.editText2);
-			int weight = Integer.valueOf(myWeight.getText().toString());
-
+			
 			person = new Person(name, weight, height, gender);
 
 			personExists = true;
 			
 			setContentView(R.layout.activity_main);
 		}else{
+			if(!name.equals(person.getName()))
+				person.setName(name);
+			else if(height.getFt() != person.getHeight().getFt())
+				person.setHeight(height.getFt(), person.getHeight().getIn());
+			else if(height.getIn() != person.getHeight().getIn())
+				person.setHeight(person.getHeight().getFt(), height.getIn());
+			else if(weight != person.getWeight())
+				person.setWeight(weight);
+			else if(!gender.equals(person.getGender()))
+				person.setGender(gender);
+				
 			setContentView(R.layout.activity_main);
 			TextView textView = (TextView) findViewById(R.id.textView1);
 			textView.setText("" + person.getCurrentEvent().getNumDrinks());
@@ -130,7 +143,7 @@ public class MainActivity extends Activity {
 		}else{
 			gender.setChecked(false);
 		}
-		
+	
 		 return super.onOptionsItemSelected(item);
 	}
 }
