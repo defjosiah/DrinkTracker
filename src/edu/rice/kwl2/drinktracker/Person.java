@@ -8,7 +8,7 @@ public class Person extends APerson{
 	private double weight;
 	private Height height;
 	private String gender;
-	private ArrayList<IEvent> events;
+	private ArrayList<IEvent> events = new ArrayList<IEvent>();
 	private int end;
 	
 	/**
