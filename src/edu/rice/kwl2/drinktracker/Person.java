@@ -1,17 +1,30 @@
 package edu.rice.kwl2.drinktracker;
 
+import java.util.ArrayList;
+
 public class Person {
 	
 	private String name;
 	private double weight;
 	private Height height;
 	private String gender;
+	private ArrayList<Event> events;
 	
+	/**
+	 * Create a personal profile when user first opens app.
+	 */
 	Person(String name, double weight, Height height, String gender) {
 		this.name = name;
 		this.weight = weight;
 		this.height = height;
 		this.gender = gender;
+	}
+	
+	/**
+	 * Adds an event into the person's history.
+	 */
+	public void addEvent(Event newEvent) {
+		events.add(newEvent);
 	}
 	
 	public String getName() {
