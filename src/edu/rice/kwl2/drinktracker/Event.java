@@ -9,7 +9,7 @@ public class Event extends AEvent{
 	private DateTime endTime;
 	private DateTime date;
 	private DateTime timeOfLastDrink;
-	private ArrayList<Drink> drinksList;
+	private ArrayList<IDrink> drinksList;
 	private double numStandardDrinks;
 	
 	/**
@@ -18,13 +18,14 @@ public class Event extends AEvent{
 	public Event (Person drinker) {
 		this.drinker = drinker;
 		this.startTime = DateTime.now();
+		drinksList = new ArrayList<IDrink>();
 //		this.date = startTime.dayOfYear(); // error!
 	}
 	
 	/**
 	 * Adds a new drink to the queue.
 	 */
-	public String addDrink (Drink newDrink) {
+	public String addDrink (IDrink newDrink) {
 		drinksList.add(newDrink);
 		numStandardDrinks += newDrink.getNumStdDrinks();
 		timeOfLastDrink = DateTime.now();
