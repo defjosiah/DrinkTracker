@@ -22,6 +22,10 @@ interface IPerson {
 	
 	public double getMetabolism ();
 	
+<<<<<<< HEAD
 	public Event getCurrentEvent();
+=======
+	public IEvent getCurrentEvent();
+>>>>>>> caeb444abc6bbd4284de69cc0cc871af45af8d38
 
 }
