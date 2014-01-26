@@ -1,12 +1,14 @@
 package edu.rice.kwl2.drinktracker;
 
+import org.joda.time.DateTime;
+
 interface IEvent {
 	
 	public double getNumDrinks();
 	
 	public String getDate();
 	
-	public String getStartTime();
+	public DateTime getStartTime();
 	
 	public double getBAC();
 	

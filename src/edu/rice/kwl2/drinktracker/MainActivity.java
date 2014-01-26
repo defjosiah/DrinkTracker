@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
-	//TODO: Create the person
 	
 	private IPerson person;
 
@@ -28,7 +27,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
         super.onCreate(savedInstanceState);
-        if(personExists)
+        if(!personExists)
         {
           	setContentView(R.layout.make_a_person);
         }
@@ -68,37 +67,37 @@ public class MainActivity extends Activity {
     	Height height = new Height(feet,inch);
     	
     	EditText myWeight = (EditText)findViewById(R.id.editText2);
-    	int weight = Integer.parseInt(myWeight.getText().toString());
+    	int weight = Integer.valueOf(myWeight.getText().toString());
     	
     	person = new Person(name, weight, height, gender);
     	
     	personExists = true;
     	
     	setContentView(R.layout.activity_main);
-    
     }
     
     //Below are methods that would update the number of drinks when buttons are pushed
     public void updateNumDrinksBeer(View view){
-    	person.getCurrentEvent().addDrink("Beer",1.0);
+    	person.getCurrentEvent().addDrink("Beer", 1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
+    	System.out.println("" + person.getCurrentEvent().getNumDrinks());
     	textView.setText("" + person.getCurrentEvent().getNumDrinks());
     }
     
     public void updateNumDrinksShot(View view){
-    	person.getCurrentEvent().addDrink("Shot",1.0);
+    	person.getCurrentEvent().addDrink("Shot", 1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
     	textView.setText("" + person.getCurrentEvent().getNumDrinks());
     }
     
     public void updateNumDrinksCup(View view){
-    	person.getCurrentEvent().addDrink("Jungle",1.5);
+    	person.getCurrentEvent().addDrink("Jungle", 1.5);
     	TextView textView = (TextView) findViewById(R.id.textView1);
     	textView.setText("" + person.getCurrentEvent().getNumDrinks());
     }
     
     public void updateNumDrinksWine(View view){
-    	person.getCurrentEvent().addDrink("Wine",1.0);
+    	person.getCurrentEvent().addDrink("Wine", 1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
     	textView.setText(""+person.getCurrentEvent().getNumDrinks());
     }

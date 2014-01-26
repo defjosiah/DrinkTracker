@@ -9,7 +9,7 @@ public class Event extends AEvent{
 	private DateTime endTime;
 	private DateTime date;
 	private DateTime timeOfLastDrink;
-	private ArrayList<Drink> drinksList;
+	private ArrayList<IDrink> drinksList;
 	private double numStandardDrinks;
 	
 	/**
@@ -18,13 +18,14 @@ public class Event extends AEvent{
 	public Event (Person drinker) {
 		this.drinker = drinker;
 		this.startTime = DateTime.now();
+		drinksList = new ArrayList<IDrink>();
 //		this.date = startTime.dayOfYear(); // error!
 	}
 	
 	/**
 	 * Adds a new drink to the queue.
 	 */
-	public String addDrink (Drink newDrink) {
+	public String addDrink (IDrink newDrink) {
 		drinksList.add(newDrink);
 		numStandardDrinks += newDrink.getNumStdDrinks();
 		timeOfLastDrink = DateTime.now();
@@ -55,7 +56,7 @@ public class Event extends AEvent{
 		Period DP = new Period(startTime, currTime);
 		int hours = DP.getHours();
 		int minutes = DP.getMinutes();
-		double drinkingTime = (double) hours + ((double) minutes)/60;
+		double drinkingTime = (double) hours + ((double) minutes)/60; // time in hours
 		// BAC formula:
 		return ((.806 * SD * 1.2) / (BodyWeight * Wt)) - (MR * drinkingTime);
 	}
@@ -108,16 +109,27 @@ public class Event extends AEvent{
 		return null;
 	}
 
+	/**
+	 * Gets the time elapsed since the start of the drinking period, in hours.
+	 */
+	public double getTimeElapsed() {
+		DateTime currTime = DateTime.now();
+		Period DP = new Period(startTime, currTime);
+		int hours = DP.getHours();
+		int minutes = DP.getMinutes();
+		double drinkingTime = (double) hours + ((double) minutes)/60; //hours
+		return Math.floor(drinkingTime*10)/10;
+	}
+	
 	@Override
-	public String getStartTime() {
-		// TODO Auto-generated method stub
-		return null;
+	public DateTime getStartTime() {
+		return startTime;
 	}
 
 	@Override
 	public String addDrink(String drinkType, double numStdDrinks) {
-		// TODO Auto-generated method stub
-		return null;
+		Drink newDrink = new Drink(drinkType, numStdDrinks);
+		return addDrink(newDrink);
 	}
 	
 
