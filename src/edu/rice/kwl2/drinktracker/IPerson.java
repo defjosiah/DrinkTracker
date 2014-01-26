@@ -17,5 +17,9 @@ interface IPerson {
 	public String getGender();
 	
 	public void setGender();
+	
+	public double getBodyWaterConstant();
+	
+	public double getMetabolism ();
 
 }
