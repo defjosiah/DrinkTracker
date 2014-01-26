@@ -1,4 +1,4 @@
-package com.example.testapp;
+package edu.rice.kwl2.drinktracker;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
