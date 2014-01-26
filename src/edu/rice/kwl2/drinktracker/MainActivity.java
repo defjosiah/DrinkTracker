@@ -20,8 +20,7 @@ public class MainActivity extends Activity {
 	
 	private IPerson person;
 
-	public final static String PERSON_NAME = "edu.rice.kwl2.drinktracker";
-
+	
 	boolean personExists=false; //set whether or not a person has been made
 	
     @Override
