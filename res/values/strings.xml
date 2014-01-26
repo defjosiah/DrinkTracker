@@ -16,6 +16,7 @@
     <string name="inches"> inches</string>
     <string name="weight">WEIGHT: </string>
     <string name="weightQ">weight in pounds</string>
+    <string name="ok">OK!</string>
     <string name="title_activity_display_message">YEAAA BITCHEZ!</string>
     
 </resources>
