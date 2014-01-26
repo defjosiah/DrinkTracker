@@ -56,7 +56,7 @@ public class Event extends AEvent{
 		Period DP = new Period(startTime, currTime);
 		int hours = DP.getHours();
 		int minutes = DP.getMinutes();
-		double drinkingTime = (double) hours + ((double) minutes)/60;
+		double drinkingTime = (double) hours + ((double) minutes)/60; // time in hours
 		// BAC formula:
 		return ((.806 * SD * 1.2) / (BodyWeight * Wt)) - (MR * drinkingTime);
 	}
@@ -109,8 +109,16 @@ public class Event extends AEvent{
 		return null;
 	}
 
+	/**
+	 * Gets the time elapsed since the start of the drinking period, in hours.
+	 */
 	public double getTimeElapsed() {
-		return 0d;
+		DateTime currTime = DateTime.now();
+		Period DP = new Period(startTime, currTime);
+		int hours = DP.getHours();
+		int minutes = DP.getMinutes();
+		double drinkingTime = (double) hours + ((double) minutes)/60; //hours
+		return Math.floor(drinkingTime*10)/10;
 	}
 	
 	@Override
