@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         if(!personExists)
         {
-          	setContentView(R.layout.make_a_person);
+          	setContentView(R.layout.activity_metrics);
         }
         else setContentView(R.layout.activity_main);
     }
