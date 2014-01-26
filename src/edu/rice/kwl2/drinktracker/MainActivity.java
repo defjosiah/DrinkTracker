@@ -71,13 +71,16 @@ public class MainActivity extends Activity {
     	
     	person = new Person(name, weight, height, gender);
     	
-    
+    	personExists = true;
+    	
+    	setContentView(R.layout.activity_main);
     }
     
     //Below are methods that would update the number of drinks when buttons are pushed
     public void updateNumDrinksBeer(View view){
     	person.getCurrentEvent().addDrink("Beer", 1.0);
     	TextView textView = (TextView) findViewById(R.id.textView1);
+    	System.out.println("" + person.getCurrentEvent().getNumDrinks());
     	textView.setText("" + person.getCurrentEvent().getNumDrinks());
     }
     
