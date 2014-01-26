@@ -2,6 +2,7 @@ package edu.rice.kwl2.drinktracker;
 
 import android.os.Bundle;
 import android.app.ActionBar;
+import android.view.MenuInflater;
 import android.app.Activity;
 import android.view.View;
 import android.content.Intent;
@@ -20,7 +21,9 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) { //for the options menu in the corner
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
     }
     
     public void sendBeer(View view) { //test to see if button pushes register
