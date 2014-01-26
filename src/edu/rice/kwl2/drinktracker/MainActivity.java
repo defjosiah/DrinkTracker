@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) { //main function
         super.onCreate(savedInstanceState);
-        if(!personExists)
+        if(personExists)
         {
           	setContentView(R.layout.make_a_person);
         }
